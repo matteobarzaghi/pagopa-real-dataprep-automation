@@ -2,6 +2,7 @@ import random
 import os
 import time
 import logging
+import zipfile
 from datetime import datetime
 from playwright.sync_api import Playwright, sync_playwright, expect
 from PIL import Image
@@ -11,33 +12,55 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler("navigation_script.log"),
-        logging.StreamHandler()
+        logging.StreamHandler()  # Solo output a console, nessun file di log
     ]
 )
 logger = logging.getLogger(__name__)
 
 def setup_directories():
     """
-    Crea le directory necessarie per il funzionamento dello script
+    Crea una directory principale con timestamp per salvare i file
     """
-    # Directory per i download
-    download_path = os.path.join(os.getcwd(), "downloads")
-    os.makedirs(download_path, exist_ok=True)
+    # Crea una directory principale con timestamp
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    main_dir = os.path.join(os.getcwd(), f"navigation_{timestamp}")
+    os.makedirs(main_dir, exist_ok=True)
     
-    # Directory per i captcha
-    captcha_path = os.path.join(os.getcwd(), "captcha")
-    os.makedirs(captcha_path, exist_ok=True)
-    
-    return download_path, captcha_path
+    return main_dir
 
-def manual_captcha_validation(captcha_file_path):
+def compress_directory(directory, output_filename=None):
+    """
+    Comprime la directory specificata in un file zip
+    
+    Args:
+        directory: Il percorso della directory da comprimere
+        output_filename: Nome del file zip di output (opzionale)
+    
+    Returns:
+        Il percorso del file zip creato
+    """
+    if output_filename is None:
+        output_filename = f"{os.path.basename(directory)}.zip"
+    
+    output_path = os.path.join(os.path.dirname(directory), output_filename)
+    
+    logger.info(f"Compressione della directory {directory} in {output_path}")
+    
+    with zipfile.ZipFile(output_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
+        for root, dirs, files in os.walk(directory):
+            for file in files:
+                file_path = os.path.join(root, file)
+                # Aggiungi il file al zip con un percorso relativo
+                arcname = os.path.relpath(file_path, os.path.dirname(directory))
+                zipf.write(file_path, arcname)
+    
+    logger.info(f"Compressione completata: {output_path}")
+    return output_path
+
+def manual_captcha_validation():
     """
     Funzione per validare manualmente il captcha durante il test
-    senza aprire l'immagine separatamente
     """
-    logger.info(f"Captcha presente nel browser: {captcha_file_path}")
-    
     try:
         # Chiedi input manuale direttamente
         captcha_text = input("Inserisci il testo del captcha che vedi nel browser: ")
@@ -56,9 +79,10 @@ def run_navigation(playwright: Playwright, headless=False, navigation_count=1) -
         headless: Modalità headless (default: False)
         navigation_count: Numero di volte per eseguire la navigazione (default: 1)
     """
-    download_path, captcha_path = setup_directories()
+    main_dir = setup_directories()
     
     logger.info(f"Avvio navigazione con parametri: headless={headless}, navigazioni={navigation_count}")
+    logger.info(f"Directory principale creata: {main_dir}")
     
     # Configura il browser con i parametri corretti per la modalità headless
     browser_launch_options = {
@@ -130,20 +154,14 @@ def run_navigation(playwright: Playwright, headless=False, navigation_count=1) -
             logger.info("Condizioni accettate")
             
             # Continua al prossimo step
-            page.get_by_role("link", name=" Continua").click()
+            page.get_by_role("link", name=" Continua").click()
             logger.info("Passaggio alla pagina captcha")
             
-            # Screenshot del CAPTCHA con nome file univoco
-            #captcha_filename = f"captcha_{timestamp}_{iteration}.png"
-            captcha_file_path = os.path.join(captcha_path)
-            
-            # Attendi che il captcha sia visibile e poi catturalo
+            # Attendi che il captcha sia visibile
             page.wait_for_selector('img.thumbnail', state='visible')
-            #page.locator('img.thumbnail').screenshot(path=captcha_file_path)
-            #logger.info(f"Captcha salvato in: {captcha_file_path}")
             
-            # Validazione del captcha
-            captcha_text = manual_captcha_validation(captcha_file_path)
+            # Validazione del captcha - senza salvare l'immagine
+            captcha_text = manual_captcha_validation()
             
             # Inserisce il captcha letto
             logger.info("Inserimento del captcha")
@@ -176,9 +194,9 @@ def run_navigation(playwright: Playwright, headless=False, navigation_count=1) -
             download = download_info.value
             timestamp_file = datetime.now().strftime("%Y%m%d_%H%M%S")
             new_filename = f"{timestamp_file}_{download.suggested_filename}"
-            download_file_path = os.path.join(download_path, new_filename)
+            download_file_path = os.path.join(main_dir, new_filename)
             
-            # Salva il file con un nome univoco
+            # Salva il file con un nome univoco direttamente nella cartella principale
             download.save_as(download_file_path)
             logger.info(f"File scaricato con successo in: {download_file_path}")
             
@@ -204,6 +222,12 @@ def run_navigation(playwright: Playwright, headless=False, navigation_count=1) -
     # Chiudi il browser dopo tutte le navigazioni
     browser.close()
     logger.info(f"Navigazioni completate con successo: {successful_navigations}/{navigation_count}")
+    
+    # Comprimi la directory principale in un file zip
+    zip_path = compress_directory(main_dir)
+    logger.info(f"Directory compressa in: {zip_path}")
+    
+    return zip_path, main_dir
 
 def main():
     """
@@ -217,9 +241,11 @@ def main():
         logger.info(f"Avvio script con parametri: headless={HEADLESS_MODE}, navigazioni={NAVIGATION_COUNT}")
         
         with sync_playwright() as playwright:
-            run_navigation(playwright, headless=HEADLESS_MODE, navigation_count=NAVIGATION_COUNT)
+            zip_path, main_dir = run_navigation(playwright, headless=HEADLESS_MODE, navigation_count=NAVIGATION_COUNT)
             
-        logger.info("Script completato con successo")
+        logger.info(f"Script completato con successo. Risultati salvati in:")
+        logger.info(f" - Directory: {main_dir}")
+        logger.info(f" - File ZIP: {zip_path}")
         
     except Exception as e:
         logger.error(f"Errore durante l'esecuzione dello script: {str(e)}")
