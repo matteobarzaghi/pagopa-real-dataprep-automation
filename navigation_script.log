@@ -1,0 +1,240 @@
+2025-04-08 17:06:24,695 - INFO - Avvio script con parametri: headless=False, navigazioni=3
+2025-04-08 17:06:27,514 - INFO - Avvio navigazione con parametri: headless=False, navigazioni=3
+2025-04-08 17:06:30,523 - INFO - Iniziando navigazione 1/3
+2025-04-08 17:06:34,432 - INFO - Accesso al sito principale
+2025-04-08 17:06:42,363 - INFO - Navigazione alla sezione pagamenti
+2025-04-08 17:06:43,769 - INFO - Compilazione form di pagamento
+2025-04-08 17:06:44,156 - INFO - Codice fiscale incollato dagli appunti
+2025-04-08 17:06:44,156 - INFO - Importo selezionato: 17 euro
+2025-04-08 17:06:44,336 - INFO - Condizioni accettate
+2025-04-08 17:06:44,676 - INFO - Passaggio alla pagina captcha
+2025-04-08 17:06:44,711 - INFO - Captcha presente nel browser: C:\Users\matteo.barzaghi\Python\pagopa-real-dataprep-automation\captcha
+2025-04-08 17:06:53,881 - INFO - Captcha inserito: rxyd5
+2025-04-08 17:06:53,881 - INFO - Inserimento del captcha
+2025-04-08 17:06:53,938 - INFO - Aggiunta al carrello
+2025-04-08 17:06:55,583 - INFO - Inserimento dati utente
+2025-04-08 17:06:56,599 - INFO - Selezione metodo pagamento mediante avviso
+2025-04-08 17:06:56,690 - INFO - Avvio download del documento
+2025-04-08 17:06:59,114 - INFO - File scaricato con successo in: C:\Users\matteo.barzaghi\Python\pagopa-real-dataprep-automation\downloads\20250408_170658_IRIS_DDP_NDP_300107000000614013.pdf
+2025-04-08 17:06:59,188 - INFO - Navigazione 1 completata
+2025-04-08 17:06:59,189 - INFO - Pausa di 3.92 secondi prima della prossima navigazione
+2025-04-08 17:07:03,113 - INFO - Iniziando navigazione 2/3
+2025-04-08 17:07:04,732 - INFO - Accesso al sito principale
+2025-04-08 17:07:13,266 - INFO - Navigazione alla sezione pagamenti
+2025-04-08 17:07:14,509 - INFO - Compilazione form di pagamento
+2025-04-08 17:07:14,687 - INFO - Codice fiscale incollato dagli appunti
+2025-04-08 17:07:14,688 - INFO - Importo selezionato: 10 euro
+2025-04-08 17:07:14,872 - INFO - Condizioni accettate
+2025-04-08 17:07:15,210 - INFO - Passaggio alla pagina captcha
+2025-04-08 17:07:15,257 - INFO - Captcha presente nel browser: C:\Users\matteo.barzaghi\Python\pagopa-real-dataprep-automation\captcha
+2025-04-08 17:07:22,353 - INFO - Captcha inserito: xbw2n
+2025-04-08 17:07:22,354 - INFO - Inserimento del captcha
+2025-04-08 17:07:22,396 - INFO - Aggiunta al carrello
+2025-04-08 17:07:23,518 - INFO - Inserimento dati utente
+2025-04-08 17:07:24,516 - INFO - Selezione metodo pagamento mediante avviso
+2025-04-08 17:07:24,578 - INFO - Avvio download del documento
+2025-04-08 17:07:26,087 - INFO - File scaricato con successo in: C:\Users\matteo.barzaghi\Python\pagopa-real-dataprep-automation\downloads\20250408_170725_IRIS_DDP_NDP_300107000000614114.pdf
+2025-04-08 17:07:26,163 - INFO - Navigazione 2 completata
+2025-04-08 17:07:26,164 - INFO - Pausa di 4.56 secondi prima della prossima navigazione
+2025-04-08 17:07:30,725 - INFO - Iniziando navigazione 3/3
+2025-04-08 17:07:31,971 - INFO - Accesso al sito principale
+2025-04-08 17:07:40,392 - INFO - Navigazione alla sezione pagamenti
+2025-04-08 17:07:41,676 - INFO - Compilazione form di pagamento
+2025-04-08 17:07:41,839 - INFO - Codice fiscale incollato dagli appunti
+2025-04-08 17:07:41,840 - INFO - Importo selezionato: 19 euro
+2025-04-08 17:07:42,002 - INFO - Condizioni accettate
+2025-04-08 17:07:42,274 - INFO - Passaggio alla pagina captcha
+2025-04-08 17:07:42,313 - INFO - Captcha presente nel browser: C:\Users\matteo.barzaghi\Python\pagopa-real-dataprep-automation\captcha
+2025-04-08 17:07:47,585 - INFO - Captcha inserito: k77rh
+2025-04-08 17:07:47,585 - INFO - Inserimento del captcha
+2025-04-08 17:07:47,630 - INFO - Aggiunta al carrello
+2025-04-08 17:07:48,661 - INFO - Inserimento dati utente
+2025-04-08 17:07:49,679 - INFO - Selezione metodo pagamento mediante avviso
+2025-04-08 17:07:49,754 - INFO - Avvio download del documento
+2025-04-08 17:07:51,365 - INFO - File scaricato con successo in: C:\Users\matteo.barzaghi\Python\pagopa-real-dataprep-automation\downloads\20250408_170751_IRIS_DDP_NDP_300107000000614215.pdf
+2025-04-08 17:07:51,454 - INFO - Navigazione 3 completata
+2025-04-08 17:07:52,549 - INFO - Navigazioni completate con successo: 3/3
+2025-04-08 17:07:52,622 - INFO - Script completato con successo
+2025-04-09 15:13:23,485 - INFO - Avvio script con parametri: headless=False, navigazioni=10
+2025-04-09 15:13:43,014 - INFO - Avvio navigazione con parametri: headless=False, navigazioni=10
+2025-04-09 15:13:46,326 - INFO - Iniziando navigazione 1/10
+2025-04-09 15:13:53,171 - INFO - Accesso al sito principale
+2025-04-09 15:14:03,940 - INFO - Navigazione alla sezione pagamenti
+2025-04-09 15:14:06,403 - INFO - Compilazione form di pagamento
+2025-04-09 15:14:07,430 - INFO - Codice fiscale incollato dagli appunti
+2025-04-09 15:14:07,433 - INFO - Importo selezionato: 40 euro
+2025-04-09 15:14:07,852 - INFO - Condizioni accettate
+2025-04-09 15:14:08,310 - INFO - Passaggio alla pagina captcha
+2025-04-09 15:14:08,390 - INFO - Captcha presente nel browser: C:\Users\matteo.barzaghi\Python\pagopa-real-dataprep-automation\captcha
+2025-04-09 15:14:14,666 - INFO - Captcha inserito: cpd4p
+2025-04-09 15:14:14,668 - INFO - Inserimento del captcha
+2025-04-09 15:14:14,762 - INFO - Aggiunta al carrello
+2025-04-09 15:14:17,347 - INFO - Inserimento dati utente
+2025-04-09 15:14:21,651 - INFO - Selezione metodo pagamento mediante avviso
+2025-04-09 15:14:21,790 - INFO - Avvio download del documento
+2025-04-09 15:14:25,654 - INFO - File scaricato con successo in: C:\Users\matteo.barzaghi\Python\pagopa-real-dataprep-automation\downloads\20250409_151423_IRIS_DDP_NDP_300107000000614417.pdf
+2025-04-09 15:14:25,798 - INFO - Navigazione 1 completata
+2025-04-09 15:14:25,799 - INFO - Pausa di 2.53 secondi prima della prossima navigazione
+2025-04-09 15:14:28,329 - INFO - Iniziando navigazione 2/10
+2025-04-09 15:14:29,537 - INFO - Accesso al sito principale
+2025-04-09 15:14:37,355 - INFO - Navigazione alla sezione pagamenti
+2025-04-09 15:14:38,696 - INFO - Compilazione form di pagamento
+2025-04-09 15:14:38,818 - INFO - Codice fiscale incollato dagli appunti
+2025-04-09 15:14:38,818 - INFO - Importo selezionato: 22 euro
+2025-04-09 15:14:38,955 - INFO - Condizioni accettate
+2025-04-09 15:14:39,199 - INFO - Passaggio alla pagina captcha
+2025-04-09 15:14:39,230 - INFO - Captcha presente nel browser: C:\Users\matteo.barzaghi\Python\pagopa-real-dataprep-automation\captcha
+2025-04-09 15:14:49,466 - INFO - Captcha inserito: k58ma
+2025-04-09 15:14:49,466 - INFO - Inserimento del captcha
+2025-04-09 15:14:49,513 - INFO - Aggiunta al carrello
+2025-04-09 15:14:53,356 - INFO - Inserimento dati utente
+2025-04-09 15:14:54,376 - INFO - Selezione metodo pagamento mediante avviso
+2025-04-09 15:14:54,434 - INFO - Avvio download del documento
+2025-04-09 15:14:56,070 - INFO - File scaricato con successo in: C:\Users\matteo.barzaghi\Python\pagopa-real-dataprep-automation\downloads\20250409_151455_IRIS_DDP_NDP_300107000000614518.pdf
+2025-04-09 15:14:56,139 - INFO - Navigazione 2 completata
+2025-04-09 15:14:56,139 - INFO - Pausa di 3.76 secondi prima della prossima navigazione
+2025-04-09 15:14:59,898 - INFO - Iniziando navigazione 3/10
+2025-04-09 15:15:00,408 - INFO - Accesso al sito principale
+2025-04-09 15:15:07,448 - INFO - Navigazione alla sezione pagamenti
+2025-04-09 15:15:08,480 - INFO - Compilazione form di pagamento
+2025-04-09 15:15:08,617 - INFO - Codice fiscale incollato dagli appunti
+2025-04-09 15:15:08,618 - INFO - Importo selezionato: 42 euro
+2025-04-09 15:15:08,731 - INFO - Condizioni accettate
+2025-04-09 15:15:08,947 - INFO - Passaggio alla pagina captcha
+2025-04-09 15:15:09,001 - INFO - Captcha presente nel browser: C:\Users\matteo.barzaghi\Python\pagopa-real-dataprep-automation\captcha
+2025-04-09 15:15:16,570 - INFO - Captcha inserito: 8py3b
+2025-04-09 15:15:16,570 - INFO - Inserimento del captcha
+2025-04-09 15:15:16,608 - INFO - Aggiunta al carrello
+2025-04-09 15:15:18,225 - INFO - Inserimento dati utente
+2025-04-09 15:15:19,208 - INFO - Selezione metodo pagamento mediante avviso
+2025-04-09 15:15:19,263 - INFO - Avvio download del documento
+2025-04-09 15:15:20,683 - INFO - File scaricato con successo in: C:\Users\matteo.barzaghi\Python\pagopa-real-dataprep-automation\downloads\20250409_151520_IRIS_DDP_NDP_300107000000614619.pdf
+2025-04-09 15:15:20,749 - INFO - Navigazione 3 completata
+2025-04-09 15:15:20,749 - INFO - Pausa di 2.90 secondi prima della prossima navigazione
+2025-04-09 15:15:23,647 - INFO - Iniziando navigazione 4/10
+2025-04-09 15:15:24,116 - INFO - Accesso al sito principale
+2025-04-09 15:15:33,233 - INFO - Navigazione alla sezione pagamenti
+2025-04-09 15:15:34,492 - INFO - Compilazione form di pagamento
+2025-04-09 15:15:34,617 - INFO - Codice fiscale incollato dagli appunti
+2025-04-09 15:15:34,617 - INFO - Importo selezionato: 36 euro
+2025-04-09 15:15:34,732 - INFO - Condizioni accettate
+2025-04-09 15:15:34,941 - INFO - Passaggio alla pagina captcha
+2025-04-09 15:15:34,971 - INFO - Captcha presente nel browser: C:\Users\matteo.barzaghi\Python\pagopa-real-dataprep-automation\captcha
+2025-04-09 15:15:44,714 - INFO - Captcha inserito: r76n3
+2025-04-09 15:15:44,715 - INFO - Inserimento del captcha
+2025-04-09 15:15:44,757 - INFO - Aggiunta al carrello
+2025-04-09 15:15:46,390 - INFO - Inserimento dati utente
+2025-04-09 15:15:47,408 - INFO - Selezione metodo pagamento mediante avviso
+2025-04-09 15:15:47,461 - INFO - Avvio download del documento
+2025-04-09 15:15:48,970 - INFO - File scaricato con successo in: C:\Users\matteo.barzaghi\Python\pagopa-real-dataprep-automation\downloads\20250409_151548_IRIS_DDP_NDP_300107000000614720.pdf
+2025-04-09 15:15:49,048 - INFO - Navigazione 4 completata
+2025-04-09 15:15:49,049 - INFO - Pausa di 4.29 secondi prima della prossima navigazione
+2025-04-09 15:15:53,341 - INFO - Iniziando navigazione 5/10
+2025-04-09 15:15:54,150 - INFO - Accesso al sito principale
+2025-04-09 15:16:03,044 - INFO - Navigazione alla sezione pagamenti
+2025-04-09 15:16:04,229 - INFO - Compilazione form di pagamento
+2025-04-09 15:16:04,365 - INFO - Codice fiscale incollato dagli appunti
+2025-04-09 15:16:04,366 - INFO - Importo selezionato: 39 euro
+2025-04-09 15:16:04,481 - INFO - Condizioni accettate
+2025-04-09 15:16:04,763 - INFO - Passaggio alla pagina captcha
+2025-04-09 15:16:04,789 - INFO - Captcha presente nel browser: C:\Users\matteo.barzaghi\Python\pagopa-real-dataprep-automation\captcha
+2025-04-09 15:16:12,386 - INFO - Captcha inserito: dy4f2
+2025-04-09 15:16:12,387 - INFO - Inserimento del captcha
+2025-04-09 15:16:12,421 - INFO - Aggiunta al carrello
+2025-04-09 15:16:14,100 - INFO - Inserimento dati utente
+2025-04-09 15:16:15,091 - INFO - Selezione metodo pagamento mediante avviso
+2025-04-09 15:16:15,149 - INFO - Avvio download del documento
+2025-04-09 15:16:16,615 - INFO - File scaricato con successo in: C:\Users\matteo.barzaghi\Python\pagopa-real-dataprep-automation\downloads\20250409_151616_IRIS_DDP_NDP_300107000000614821.pdf
+2025-04-09 15:16:16,683 - INFO - Navigazione 5 completata
+2025-04-09 15:16:16,684 - INFO - Pausa di 3.92 secondi prima della prossima navigazione
+2025-04-09 15:16:20,600 - INFO - Iniziando navigazione 6/10
+2025-04-09 15:16:21,074 - INFO - Accesso al sito principale
+2025-04-09 15:16:27,745 - INFO - Navigazione alla sezione pagamenti
+2025-04-09 15:16:28,780 - INFO - Compilazione form di pagamento
+2025-04-09 15:16:28,881 - INFO - Codice fiscale incollato dagli appunti
+2025-04-09 15:16:28,881 - INFO - Importo selezionato: 32 euro
+2025-04-09 15:16:29,013 - INFO - Condizioni accettate
+2025-04-09 15:16:29,218 - INFO - Passaggio alla pagina captcha
+2025-04-09 15:16:29,251 - INFO - Captcha presente nel browser: C:\Users\matteo.barzaghi\Python\pagopa-real-dataprep-automation\captcha
+2025-04-09 15:16:38,922 - INFO - Captcha inserito: e7h2a
+2025-04-09 15:16:38,923 - INFO - Inserimento del captcha
+2025-04-09 15:16:38,973 - INFO - Aggiunta al carrello
+2025-04-09 15:16:42,628 - INFO - Inserimento dati utente
+2025-04-09 15:16:43,608 - INFO - Selezione metodo pagamento mediante avviso
+2025-04-09 15:16:43,657 - INFO - Avvio download del documento
+2025-04-09 15:16:45,078 - INFO - File scaricato con successo in: C:\Users\matteo.barzaghi\Python\pagopa-real-dataprep-automation\downloads\20250409_151644_IRIS_DDP_NDP_300107000000614922.pdf
+2025-04-09 15:16:45,148 - INFO - Navigazione 6 completata
+2025-04-09 15:16:45,148 - INFO - Pausa di 2.54 secondi prima della prossima navigazione
+2025-04-09 15:16:47,687 - INFO - Iniziando navigazione 7/10
+2025-04-09 15:16:48,221 - INFO - Accesso al sito principale
+2025-04-09 15:16:55,120 - INFO - Navigazione alla sezione pagamenti
+2025-04-09 15:16:56,280 - INFO - Compilazione form di pagamento
+2025-04-09 15:16:56,383 - INFO - Codice fiscale incollato dagli appunti
+2025-04-09 15:16:56,384 - INFO - Importo selezionato: 28 euro
+2025-04-09 15:16:56,511 - INFO - Condizioni accettate
+2025-04-09 15:16:56,742 - INFO - Passaggio alla pagina captcha
+2025-04-09 15:16:56,763 - INFO - Captcha presente nel browser: C:\Users\matteo.barzaghi\Python\pagopa-real-dataprep-automation\captcha
+2025-04-09 15:17:04,688 - INFO - Captcha inserito: 4fda2
+2025-04-09 15:17:04,689 - INFO - Inserimento del captcha
+2025-04-09 15:17:04,741 - INFO - Aggiunta al carrello
+2025-04-09 15:17:06,502 - INFO - Inserimento dati utente
+2025-04-09 15:17:07,491 - INFO - Selezione metodo pagamento mediante avviso
+2025-04-09 15:17:07,557 - INFO - Avvio download del documento
+2025-04-09 15:17:09,005 - INFO - File scaricato con successo in: C:\Users\matteo.barzaghi\Python\pagopa-real-dataprep-automation\downloads\20250409_151708_IRIS_DDP_NDP_300107000000615023.pdf
+2025-04-09 15:17:09,080 - INFO - Navigazione 7 completata
+2025-04-09 15:17:09,081 - INFO - Pausa di 2.43 secondi prima della prossima navigazione
+2025-04-09 15:17:11,512 - INFO - Iniziando navigazione 8/10
+2025-04-09 15:17:12,065 - INFO - Accesso al sito principale
+2025-04-09 15:17:20,944 - INFO - Navigazione alla sezione pagamenti
+2025-04-09 15:17:22,816 - INFO - Compilazione form di pagamento
+2025-04-09 15:17:22,935 - INFO - Codice fiscale incollato dagli appunti
+2025-04-09 15:17:22,936 - INFO - Importo selezionato: 36 euro
+2025-04-09 15:17:23,061 - INFO - Condizioni accettate
+2025-04-09 15:17:23,334 - INFO - Passaggio alla pagina captcha
+2025-04-09 15:17:23,366 - INFO - Captcha presente nel browser: C:\Users\matteo.barzaghi\Python\pagopa-real-dataprep-automation\captcha
+2025-04-09 15:17:31,727 - INFO - Captcha inserito: 2w7re
+2025-04-09 15:17:31,728 - INFO - Inserimento del captcha
+2025-04-09 15:17:31,770 - INFO - Aggiunta al carrello
+2025-04-09 15:17:33,492 - INFO - Inserimento dati utente
+2025-04-09 15:17:34,524 - INFO - Selezione metodo pagamento mediante avviso
+2025-04-09 15:17:34,595 - INFO - Avvio download del documento
+2025-04-09 15:17:36,049 - INFO - File scaricato con successo in: C:\Users\matteo.barzaghi\Python\pagopa-real-dataprep-automation\downloads\20250409_151735_IRIS_DDP_NDP_300107000000615124.pdf
+2025-04-09 15:17:36,134 - INFO - Navigazione 8 completata
+2025-04-09 15:17:36,134 - INFO - Pausa di 4.81 secondi prima della prossima navigazione
+2025-04-09 15:17:40,949 - INFO - Iniziando navigazione 9/10
+2025-04-09 15:17:41,682 - INFO - Accesso al sito principale
+2025-04-09 15:17:51,003 - INFO - Navigazione alla sezione pagamenti
+2025-04-09 15:17:52,307 - INFO - Compilazione form di pagamento
+2025-04-09 15:17:52,424 - INFO - Codice fiscale incollato dagli appunti
+2025-04-09 15:17:52,424 - INFO - Importo selezionato: 18 euro
+2025-04-09 15:17:52,575 - INFO - Condizioni accettate
+2025-04-09 15:17:52,898 - INFO - Passaggio alla pagina captcha
+2025-04-09 15:17:52,927 - INFO - Captcha presente nel browser: C:\Users\matteo.barzaghi\Python\pagopa-real-dataprep-automation\captcha
+2025-04-09 15:17:59,159 - INFO - Captcha inserito: cxrgh
+2025-04-09 15:17:59,160 - INFO - Inserimento del captcha
+2025-04-09 15:17:59,204 - INFO - Aggiunta al carrello
+2025-04-09 15:18:00,295 - INFO - Inserimento dati utente
+2025-04-09 15:18:01,331 - INFO - Selezione metodo pagamento mediante avviso
+2025-04-09 15:18:01,389 - INFO - Avvio download del documento
+2025-04-09 15:18:03,161 - INFO - File scaricato con successo in: C:\Users\matteo.barzaghi\Python\pagopa-real-dataprep-automation\downloads\20250409_151802_IRIS_DDP_NDP_300107000000615225.pdf
+2025-04-09 15:18:03,248 - INFO - Navigazione 9 completata
+2025-04-09 15:18:03,249 - INFO - Pausa di 2.61 secondi prima della prossima navigazione
+2025-04-09 15:18:05,864 - INFO - Iniziando navigazione 10/10
+2025-04-09 15:18:06,658 - INFO - Accesso al sito principale
+2025-04-09 15:18:13,827 - INFO - Navigazione alla sezione pagamenti
+2025-04-09 15:18:14,900 - INFO - Compilazione form di pagamento
+2025-04-09 15:18:15,018 - INFO - Codice fiscale incollato dagli appunti
+2025-04-09 15:18:15,019 - INFO - Importo selezionato: 41 euro
+2025-04-09 15:18:15,159 - INFO - Condizioni accettate
+2025-04-09 15:18:15,530 - INFO - Passaggio alla pagina captcha
+2025-04-09 15:18:15,564 - INFO - Captcha presente nel browser: C:\Users\matteo.barzaghi\Python\pagopa-real-dataprep-automation\captcha
+2025-04-09 15:18:21,391 - INFO - Captcha inserito: k42n7
+2025-04-09 15:18:21,392 - INFO - Inserimento del captcha
+2025-04-09 15:18:21,431 - INFO - Aggiunta al carrello
+2025-04-09 15:18:22,618 - INFO - Inserimento dati utente
+2025-04-09 15:18:24,119 - INFO - Selezione metodo pagamento mediante avviso
+2025-04-09 15:18:24,178 - INFO - Avvio download del documento
+2025-04-09 15:18:25,615 - INFO - File scaricato con successo in: C:\Users\matteo.barzaghi\Python\pagopa-real-dataprep-automation\downloads\20250409_151825_IRIS_DDP_NDP_300107000000615326.pdf
+2025-04-09 15:18:25,681 - INFO - Navigazione 10 completata
+2025-04-09 15:18:26,245 - INFO - Navigazioni completate con successo: 10/10
+2025-04-09 15:18:26,298 - INFO - Script completato con successo
