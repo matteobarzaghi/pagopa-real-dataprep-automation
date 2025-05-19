@@ -26,6 +26,44 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+def solve_captcha_until_success(page, captcha_file_path):
+    """
+    Tenta di risolvere il CAPTCHA finché non compare il bottone 'Paga'.
+    """
+    while True:
+        # Nuovo screenshot del CAPTCHA
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        current_captcha_file = captcha_file_path.replace(".png", f"_{timestamp}.png")
+        try:
+            page.wait_for_selector('img.thumbnail', state='visible', timeout=3000)
+            page.locator('img.thumbnail').screenshot(path=current_captcha_file)
+        except Exception as e:
+            logger.warning(f"Impossibile catturare CAPTCHA: {e}")
+            continue
+
+        captcha_text = solve_captcha_with_gpt(current_captcha_file)
+        if not captcha_text:
+            logger.warning("Fallback to manual CAPTCHA input.")
+            captcha_text = manual_captcha_validation()
+
+        page.locator("[id='confirmConcessioneDemanioMarittimoForm:captchaInput']").fill(captcha_text)
+        page.get_by_role("link", name=" Aggiungi al carrello").click()
+
+        try:
+            paga_button = page.get_by_role("link", name="  Paga")
+            paga_button.wait_for(timeout=3000)
+            paga_button.click()
+            logger.info(f"✅ CAPTCHA risolto correttamente: {captcha_text}")
+            break
+        except Exception:
+            logger.warning("❌ CAPTCHA errato o bottone 'Paga' non visibile. Ritento...")
+
+        # Cleanup file corrente
+        try:
+            os.remove(current_captcha_file)
+        except Exception:
+            pass
+
 def setup_directories():
     """
     Crea una directory principale con timestamp per salvare i file
@@ -173,25 +211,13 @@ def run_navigation(playwright: Playwright, headless=False, navigation_count=1):
             page.wait_for_selector('img.thumbnail', state='visible')
             page.locator('img.thumbnail').screenshot(path=captcha_file)
 
-            # Risoluzione del CAPTCHA (prima automatica, poi manuale se fallisce)
-            captcha_text = solve_captcha_with_gpt(captcha_file)
-            if not captcha_text:
-                logger.warning("Fallback to manual CAPTCHA input.")
-                captcha_text = manual_captcha_validation()
-                
+            solve_captcha_until_success(page, captcha_file)
             # Rimuovi il file captcha temporaneo dopo l'uso
             try:
                 os.remove(captcha_file)
                 logger.debug(f"File captcha temporaneo eliminato: {captcha_file}")
             except Exception as e:
                 logger.debug(f"Errore eliminazione file captcha temporaneo: {e}")
-
-            # Inserimento CAPTCHA
-            page.locator("[id='confirmConcessioneDemanioMarittimoForm:captchaInput']").fill(captcha_text)
-
-            # Prosegui con il pagamento
-            page.get_by_role("link", name=" Aggiungi al carrello").click()
-            page.get_by_role("link", name="  Paga").click()
 
             page.locator("#cfInput").fill("brzmtt91s22f205t")
             page.locator("input[name='email']").fill("matteo@mail.com")
@@ -253,7 +279,7 @@ def main():
     try:
         # Parametri configurabili
         HEADLESS_MODE = False  # Imposta a True per eseguire in modalità headless
-        NAVIGATION_COUNT = 3   # Numero di volte per eseguire la navigazione
+        NAVIGATION_COUNT = 1   # Numero di volte per eseguire la navigazione
         
         logger.info(f"Avvio script con parametri: headless={HEADLESS_MODE}, navigazioni={NAVIGATION_COUNT}")
         
