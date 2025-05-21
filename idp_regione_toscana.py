@@ -1,3 +1,4 @@
+import argparse
 import random
 import os
 import time
@@ -276,20 +277,23 @@ def main():
     """
     Funzione principale per l'esecuzione dello script
     """
+    parser = argparse.ArgumentParser(description="Script per generare QR code da ambiente di test Regione Toscana.")
+    parser.add_argument("--count", type=int, default=1, help="Numero di QR code da generare (navigazioni)")
+    parser.add_argument("--headless", action="store_true", help="Esegui in modalità headless (senza browser visibile)")
+    args = parser.parse_args()
+
     try:
-        # Parametri configurabili
-        HEADLESS_MODE = False  # Imposta a True per eseguire in modalità headless
-        NAVIGATION_COUNT = 1   # Numero di volte per eseguire la navigazione
-        
-        logger.info(f"Avvio script con parametri: headless={HEADLESS_MODE}, navigazioni={NAVIGATION_COUNT}")
-        
+        logger.info(f"Avvio script con parametri: headless={args.headless}, navigazioni={args.count}")
         with sync_playwright() as playwright:
-            zip_path, main_dir = run_navigation(playwright, headless=HEADLESS_MODE, navigation_count=NAVIGATION_COUNT)
-            
+            zip_path, main_dir = run_navigation(
+                playwright,
+                headless=args.headless,
+                navigation_count=args.count
+            )
         logger.info(f"Script completato con successo. Risultati salvati in:")
         logger.info(f" - Directory: {main_dir}")
         logger.info(f" - File ZIP: {zip_path}")
-        
+
     except Exception as e:
         logger.error(f"Errore durante l'esecuzione dello script: {str(e)}")
 
