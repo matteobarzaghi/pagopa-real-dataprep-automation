@@ -235,13 +235,8 @@ def main():
     """
     try:
         # Parametri configurabili
-<<<<<<< Updated upstream
-        HEADLESS_MODE = False  # Imposta a True per eseguire in modalità headless
-        NAVIGATION_COUNT = 10   # Numero di volte per eseguire la navigazione
-=======
         HEADLESS_MODE = True  # Imposta a True per eseguire in modalità headless
         NAVIGATION_COUNT = 1   # Numero di volte per eseguire la navigazione
->>>>>>> Stashed changes
         
         logger.info(f"Avvio script con parametri: headless={HEADLESS_MODE}, navigazioni={NAVIGATION_COUNT}")
         
